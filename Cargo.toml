@@ -1,0 +1,24 @@
+[package]
+name = "tryfed"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[[bin]]
+name = "user"
+path = "src/user.rs"
+
+[[bin]]
+name = "product"
+path = "src/product.rs"
+
+[[bin]]
+name = "review"
+path = "src/review.rs"
+
+[dependencies]
+async-graphql = "4.0.4"
+async-graphql-actix-web = "4.0.4"
+actix-web = { version = "4.0.1", default-features = false, features = ["macros"] }
+actix-cors = "0.6.1"
